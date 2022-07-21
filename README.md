@@ -22,7 +22,10 @@ Install the following prerequisites:
 From the **root** directory run:
 
 ```bash
-cd backend && python -m venv venv
+cd backend
+```
+```bash
+python -m venv venv
 ```
 
 ### 2. Activate the virtual environment
@@ -66,7 +69,10 @@ python manage.py migrate
 From the **root** directory run:
 
 ```bash
-cd frontend && npm install
+cd frontend
+```
+```bash
+npm install
 ```
 
 ## Run the application
