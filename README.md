@@ -6,6 +6,12 @@ This is an image classification app built using **Django 3.2**, **Next.js 12**, 
 ![plot](https://github.com/BobsProgrammingAcademy/Image-Classification/blob/main/frontend/public/images/image_classification.png?raw=true)
 
 
+## Table of Contents 
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Run the application](#run-the-application)
+
+
 ## Prerequisites
 
 Install the following prerequisites:
