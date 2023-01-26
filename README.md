@@ -9,7 +9,8 @@ This is an image classification app built using **Django 3**, **Django REST Fram
 ## Table of Contents 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Run the application](#run-the-application)
+- [Running the application](#run-the-application)
+- [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
 
 
@@ -105,6 +106,38 @@ npm run dev
 ### 3. View the application
 
 Go to http://localhost:3000/ to view the application.
+
+## Customize the application
+
+This section describes how to customize the application. 
+
+### 1. Changing Colors
+
+To modify the colors in the application, make changes in the ```frontend/src/theme/theme.js``` file.
+
+### 2. Changing Fonts
+
+To modify the fonts in the application, first, add a new font to the ```frontend/src/pages/_document.js``` file, and then make changes in the ```frontend/src/theme/theme.js``` file.
+
+### 3. Changing Logo
+
+To modify the logo in the application, make changes in the ```frontend/src/layout/Header.js``` and ```frontend/src/layout/Sidebar.js``` files.
+
+### 4. Changing the Image in the Hero Section
+
+To modify the image in the Hero section, make changes in the ```frontend/src/components/Hero.js``` and ```frontend/src/layout/Footer.js``` files.
+
+### 5. Changing the Text in the Hero Section
+
+To modify the text in the Hero section, make changes in the ```frontend/src/components/Hero.js``` file.
+
+### 6. Changing Buttons in the Hero Section
+
+To modify the two buttons in the Hero section, make changes in the ```frontend/src/components/HeroButtons.js``` file.
+
+### 7. Changing the App Description
+
+To modify the app's description on the home page, make changes in the ```frontend/src/components/Description.js``` file.
 
 
 ## Copyright and License
