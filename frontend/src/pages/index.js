@@ -8,19 +8,19 @@ import Hero from '../components/Hero';
 import Spacer from '../components/Spacer';
 
 const Home = () => {
-    return (
-        <React.Fragment>
-            <Head>
-                <title>
-                    Home | Image Classification
-                </title>
-            </Head>
-            <Hero />
-            <CustomDivider />
-            <Description />
-            <Spacer sx={{ pt: 20}} />
-        </React.Fragment>
-    );
+  return (
+    <>
+      <Head>
+        <title>
+          Home | Image Classification
+        </title>
+      </Head>
+      <Hero />
+      <CustomDivider />
+      <Description />
+      <Spacer sx={{ pt: 20}} />
+    </>
+  );
 };
 
 export default Home;
