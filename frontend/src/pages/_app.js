@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
 import Head from 'next/head';
@@ -16,45 +16,45 @@ import Layout from '../layout/Layout';
 const clientSideEmotionCache = createEmotionCache();
 
 const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) => {
-    React.useEffect(() => {
-        // Remove the server-side injected CSS
-        const jssStyles = document.querySelector('#jss-server-side');
-        if (jssStyles) {
-            jssStyles.parentElement.removeChild(jssStyles);
-        }
-
-        AOS.init({
-            once: true,
-            delay: 0,
-            duration: 800,
-            offset: 0,
-            easing: 'ease-in-out',
-        });
-    }, []);
-
-    return (
-        <CacheProvider value={emotionCache}>
-            <Head>
-                <meta charSet='utf-8' />
-                <meta content='minimum-scale=1, initial-scale=1, width=device-width' name='viewport' />
-                <meta name='description' content='Image Classification' />
-                <meta name='keywords' content='image, classification, machine learning' />
-                <title>Image Classification</title>
-            </Head>
-                <ThemeProvider theme={theme}>
-                    <CssBaseline />
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
-                </ThemeProvider>
-        </CacheProvider>
-    );
+  useEffect(() => {
+    // Remove the server-side injected CSS
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles) {
+      jssStyles.parentElement.removeChild(jssStyles);
+    }
+    
+    AOS.init({
+      once: true,
+      delay: 0,
+      duration: 800,
+      offset: 0,
+      easing: 'ease-in-out',
+    });
+  }, []);
+  
+  return (
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta charSet='utf-8' />
+        <meta content='minimum-scale=1, initial-scale=1, width=device-width' name='viewport' />
+        <meta name='description' content='Image Classification' />
+        <meta name='keywords' content='image, classification, machine learning' />
+        <title>Image Classification</title>
+      </Head>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </CacheProvider>
+  );
 };
 
 App.propTypes = {
-    Component: PropTypes.elementType.isRequired,
-    emotionCache: PropTypes.object,
-    pageProps: PropTypes.object.isRequired,
+  Component: PropTypes.elementType.isRequired,
+  emotionCache: PropTypes.object,
+  pageProps: PropTypes.object.isRequired,
 };
 
 export default App;
