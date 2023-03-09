@@ -8,7 +8,7 @@ const theme = createTheme({
             paper: 'rgb(255, 255, 255)',
         },
         primary: {
-            main: 'rgb(76, 48, 135)',
+            main: 'rgb(253, 94, 83)',
         },
         secondary: {
             main: 'rgb(255, 255, 255)',
@@ -35,7 +35,7 @@ const theme = createTheme({
         button: {
             fontWeight: 600,
         },
-        fontFamily: '"Roboto", sans-serif',
+        fontFamily: '"Arial", sans-serif',
         fontSize: 13,
         fontWeightLight: 300,
         fontWeightRegular: 400,

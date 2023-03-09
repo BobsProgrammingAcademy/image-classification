@@ -39,7 +39,7 @@ const App = ({ Component, pageProps, emotionCache = clientSideEmotionCache }) =>
                 <meta content='minimum-scale=1, initial-scale=1, width=device-width' name='viewport' />
                 <meta name='description' content='Image Classification' />
                 <meta name='keywords' content='image, classification, machine learning' />
-                <title>Image Classification</title>
+                <title>Ovarian Cancer Prediction</title>
             </Head>
                 <ThemeProvider theme={theme}>
                     <CssBaseline />

@@ -77,7 +77,7 @@ const Footer = () => {
                                                 variant='body2'
                                                 color={theme.palette.text.secondary}
                                             >
-                                                Copyright &copy; {new Date().getFullYear()} Bob's Programming Academy.
+                                                Copyright &copy; {new Date().getFullYear()} Queen's University Faculty of Engineering.
                                             </Typography>
                                         }
                                     />
@@ -103,7 +103,7 @@ const Footer = () => {
                                                     rel='noreferrer'
                                                     color={theme.palette.text.secondary}
                                                 >
-                                                    Josh Power
+                                                    ELEC 498 Group 16
                                                 </Link>
                                                 {' '}
                                                 on
