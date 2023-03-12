@@ -32,7 +32,7 @@ const Hero = () => {
                                 variant='h1'
                                 marginTop='30px'
                             >
-                                Select an Image for Classification
+                                Empower yourself with knowledge, embrace a healthier you! 
                             </Typography>
                         </Box>
                         <Box marginBottom={3}>
@@ -44,7 +44,7 @@ const Hero = () => {
                                 paddingBottom={3}
                                 marginBottom='15px'
                             >
-                                The App Will Tell You What Is On the Image You Have Selected
+                                Join the movement for early detection, treatment, and support.
                             </Typography>
                         </Box>
                         <HeroButtons />
