@@ -1,9 +1,12 @@
-import React from 'react';
-import Dropzone from 'react-dropzone';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+
 
 // Font Awesome Icons
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -11,76 +14,66 @@ import { faImage as ImageIcon } from'@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(ImageIcon)
 
-const ImageDropzone = ({ accept, onDrop }) => {
-    const theme = useTheme();
+const ImageDropZone = () => {
+  const theme = useTheme();
+  const [anchorEl, setAnchorEl] = useState(null);
 
-    return (
-        <Dropzone
-            accept={accept}
-            onDrop={onDrop}
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  return (
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box
+        alignItems='center'
+        border={1}
+        borderRadius={1}
+        borderColor={theme.palette.divider}
+        display='flex'
+        flexWrap='wrap'
+        justifyContent='center'
+        padding={6}
+        sx={{
+          '&:hover': {
+            backgroundColor: theme.palette.action.hover,
+            cursor: 'pointer',
+          }
+        }}
+        onClick={handleClick}
+      >
+        <Box
+          sx={{
+            '& img': {
+              width: 100
+            }
+          }}
         >
-            {({isDragActive, getRootProps, getInputProps}) => (
-                <div>
-                    <Box
-                        alignItems='center'
-                        border={1}
-                        borderRadius={1}
-                        borderStyle='dashed'
-                        borderColor={theme.palette.divider}
-                        display='flex'
-                        flexWrap='wrap'
-                        justifyContent='center'
-                        outline='none'
-                        padding={6}
-                        sx={{
-                            ...(isDragActive && {
-                                backgroundColor: theme.palette.action.active,
-                                opacity: 0.5
-                            }),
-                            '&:hover': {
-                                backgroundColor: theme.palette.action.hover,
-                                cursor: 'pointer',
-                                opacity: 0.5
-                            }
-                        }}
-                        {...getRootProps()}
-                    >
-                        <input {...getInputProps()} />
-                        <Box 
-                            sx={{
-                                '& img': {
-                                    width: 100
-                                }
-                            }}
-                        />
-                        <Box padding={2}>
-                            <Typography variant='h4' align='center'>
-                                <FontAwesomeIcon 
-                                    icon={ImageIcon} 
-                                    style={{ 
-                                        height: 100, 
-                                        width: 100, 
-                                        color: theme.palette.text.secondary 
-                                    }} 
-                                />
-                            </Typography>
-                            <Box marginTop={3}>
-                                <Typography variant='body1' color={theme.palette.text.secondary}>
-                                    Drag and drop an image here, or
-                                    {' '}
-                                    <Link underline='always'>
-                                        click
-                                    </Link>
-                                    {' '}
-                                    to select an image
-                                </Typography>
-                            </Box>
-                        </Box>
-                    </Box>
-                </div>
-            )}
-        </Dropzone>
-    );
+          <Typography variant='h1' align='center'>
+          <HomeOutlinedIcon /> 
+          </Typography>
+        </Box>
+        <Box padding={2}>
+          <Typography variant='' color={theme.palette.text.secondary}>
+            Select survey structure
+          </Typography>
+        </Box>
+      </Box>
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Multiple Choice</MenuItem>
+        <MenuItem onClick={handleClose}>Checkbox</MenuItem>
+        <MenuItem onClick={handleClose}>Short Answer</MenuItem>
+        <MenuItem onClick={handleClose}>Long Answer</MenuItem>
+      </Menu>
+    </Box>
+  );
 };
 
-export default ImageDropzone;
+export default ImageDropZone;

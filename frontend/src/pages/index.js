@@ -12,7 +12,7 @@ const Home = () => {
         <React.Fragment>
             <Head>
                 <title>
-                    Home | Image Classification
+                    Home | Ovarian Cancer Predicition
                 </title>
             </Head>
             <Hero />

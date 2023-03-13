@@ -9,7 +9,9 @@ import { useTheme, useMediaQuery } from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
+import PollIcon from '@mui/icons-material/Poll';
 
+//This is the sidebar that appears when in mobile view
 const Sidebar = ({ onMobileClose, openMobile }) => {
     const theme = useTheme();
     const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
@@ -60,7 +62,7 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
                                     textDecoration='none'
                                     marginLeft='10px'
                                 >
-                                    Image Classification
+                                    Ovarian Cancer Risk Predicition
                                 </Typography>
                             </IconButton>
                         </Box>
@@ -101,9 +103,9 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
                             },
                         }}
                     >
-                        <InsertPhotoOutlinedIcon 
+                        <PollIcon 
                             style={{ height: 23, width: 23 }} 
-                        /> Image Classifier
+                        /> Survey
                     </Button>
                 </Box>
             </Drawer>

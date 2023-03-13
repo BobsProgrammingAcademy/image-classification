@@ -5,6 +5,7 @@ import { useTheme, useMediaQuery } from '@mui/material';
 import InfoIcon from '@mui/icons-material/HelpOutline';
 import PlayIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 
+//these are the buttons that we see on the main home page
 const HeroButtons = () => {
     const theme = useTheme();
     const isMd = useMediaQuery(
@@ -27,7 +28,7 @@ const HeroButtons = () => {
                     size='large'
                     color='primary'
                     href='/classifier'
-                    startIcon={<InfoIcon />}
+                    //startIcon={<InfoIcon />}
                     fullWidth={isMd ? false : true}
                     disableElevation={true}
                     sx={{

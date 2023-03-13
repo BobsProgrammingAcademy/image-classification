@@ -41,7 +41,7 @@ const Footer = () => {
                                         padding: 0
                                     }}
                                 >
-                                    <ListItemButton component='a' href='#'>
+                                    <ListItemButton component='a' href='www.google.com'>
                                         <ListItemText 
                                             primary={
                                                 <Typography 
@@ -94,11 +94,11 @@ const Footer = () => {
                                                 variant='body2'
                                                 color={theme.palette.text.secondary}
                                             >
-                                                Photo by
+                                                A project by
                                                 {' '}
                                                 <Link 
-                                                    href='https://unsplash.com/@joshwp'
-                                                    alt='Josh Power'
+                                                    href='https://github.com/naoddereje/ELEC_498_capstone_project'
+                                                    alt='ELEC 498'
                                                     target='_blank'
                                                     rel='noreferrer'
                                                     color={theme.palette.text.secondary}
@@ -106,16 +106,16 @@ const Footer = () => {
                                                     ELEC 498 Group 16
                                                 </Link>
                                                 {' '}
-                                                on
+                                                under the supervision of 
                                                 {' '} 
                                                 <Link 
-                                                    href='https://unsplash.com/photos/FWoH2qhLb5I'
-                                                    alt='Unsplash'
+                                                    href='https://www.ece.queensu.ca/people/MJ-Korenberg/index.html'
+                                                    alt='KorenBurg'
                                                     target='_blank'
                                                     rel='noreferrer'
                                                     color={theme.palette.text.secondary}
                                                 >
-                                                    Unsplash
+                                                    Dr. Michael Korenburg
                                                 </Link>.
                                             </Typography>
                                         }

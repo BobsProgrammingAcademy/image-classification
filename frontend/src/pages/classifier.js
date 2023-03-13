@@ -21,37 +21,23 @@ import capitalizeFirstLetter from '../utils/capitalizeFirstLetter';
 
 const Classifier = () => {
     const theme = useTheme();
-    const [files, setFiles] = React.useState([]);
     const [isLoading, setIsLoading] = React.useState(false);
     const [image, setImage] = React.useState(null);
 
-    const handleDrop = (files) => {
+    const handleDrop = (acceptedFiles) => {
         setIsLoading(true);
-        setFiles(files);
-        setImage(null);
-        loadImage(files);
-    };
-    
-    const handleRemove = () => {
-        setFiles([]);
-    };
-
-    const loadImage = (files) => {
-        setTimeout(() => {
-            setFiles(files);
-            if (setFiles.length) {
-                setIsLoading(false);
-            }
-            setImage(null);
-        }, 3000);
+        const file = acceptedFiles[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            const imgDataUrl = event.target.result;
+            sendData(file, imgDataUrl);
+        };
+        reader.readAsDataURL(file);
     };
 
-    const sendData = () => {
-        setFiles([]);
-        setIsLoading(true);
-
+    const sendData = (file, imgDataUrl) => {
         const formData = new FormData();
-        formData.append('image', files[0], files[0].name);
+        formData.append('image', file, file.name);
 
         axios.post('http://127.0.0.1:8000/api/classifier/', formData, {
             headers: {
@@ -60,19 +46,24 @@ const Classifier = () => {
             }
         })
         .then(response => {
-            getClassificationResult(response);
+            getClassificationResult(response, imgDataUrl);
         })
         .catch(err => console.log(err));
     };
 
-    const getClassificationResult = (obj) => {
+    const getClassificationResult = (obj, imgDataUrl) => {
         axios.get(`http://127.0.0.1:8000/api/classifier/${obj.data.id}/`, {
             headers: {
                 'accept': 'application/json',
             }
         })
         .then(response => {
-            setImage(response);
+            setImage({
+                data: {
+                    image: imgDataUrl,
+                    result: response.data.result
+                }
+            });
         })
         .catch(err => console.log(err));
 
@@ -87,7 +78,7 @@ const Classifier = () => {
         <React.Fragment>
             <Head>
                 <title>
-                    Image Classifier | Image Classification
+                    Survey Page | Ovarian Cancer Risk Predicition
                 </title>
             </Head>
             <Box 
@@ -131,21 +122,6 @@ const Classifier = () => {
                                                 onDrop={handleDrop}
                                             />
                                         </Box>
-                                        <Box
-                                            display='flex'
-                                            flexDirection='row'
-                                            alignItems='flex-start'
-                                            justifyContent='center'
-                                        >
-                                            {(files.length > 0 && !isLoading) && (
-                                                <Box 
-                                                    marginTop={2}
-                                                    color={theme.palette.text.secondary}
-                                                >
-                                                    Loaded image: <Button>{files[0].name}</Button>
-                                                    </Box>
-                                            )}
-                                        </Box>
                                     </CardContent>
                                 </Card>
                             </Grid>
@@ -159,14 +135,6 @@ const Classifier = () => {
                                 <ClassifyAgain submitOnClick={classifyAnother} />
                             </React.Fragment>
                         )}
-                        <Grid item xs={12}>
-                            {(files.length > 0 && !isLoading) && (
-                                <ClassifierButtons 
-                                    submitOnClick={sendData}
-                                    resetOnClick={handleRemove}
-                                />
-                            )}
-                        </Grid>
                     </Grid>
                 </Container>
             </Box>

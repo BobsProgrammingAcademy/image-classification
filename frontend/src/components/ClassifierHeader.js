@@ -14,14 +14,14 @@ const ClassifierHeader = () => {
                     color={theme.palette.text.primary}
                     variant='h2'
                 >
-                    Image Classifier
+                    Survey
                 </Typography>
                 <Box paddingTop={2}>
                     <Typography
                         color={theme.palette.text.secondary}
                         variant='h5'
                     >
-                        Select an Image for Classification
+                        Select answers to the question prompts as best as possible, these answers will determine your results!
                     </Typography>
                 </Box>
             </Grid>

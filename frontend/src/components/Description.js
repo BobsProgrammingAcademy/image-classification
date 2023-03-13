@@ -7,6 +7,7 @@ import { useTheme } from '@mui/material';
 import SendToMobileOutlinedIcon from '@mui/icons-material/SendToMobileOutlined';
 import GetAppOutlinedIcon from '@mui/icons-material/GetAppOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
+import FeedIcon from '@mui/icons-material/Feed';
 
 import DescriptionItem from './DescriptionItem';
 
@@ -55,11 +56,11 @@ const Description = () => {
                         paddingBottom={3}
                         marginBottom='15px'
                     >
-                        Navigate to the surevy page to take a survey and get a prediction of your risk of developing Ovarian Cancer.
+                        Navigate to the survey page to take a survey and get a prediction of your risk of developing Ovarian Cancer.
                     </Typography>
                     <Grid container spacing={4} data-aos='fade-up'>
                         <DescriptionItem 
-                            icon={<AddAPhotoOutlinedIcon style={{ height: 25, width: 25 }} />}
+                            icon={<FeedIcon style={{ height: 25, width: 25 }} />}
                             title='Fill in your information'
                             subtitle='Are you interested in taking a proactive step towards your health? Participating in a survey for ovarian cancer can provide you with valuable information about your risk for this disease. By answering questions about your lifestyle, medical history, and family background, you can receive personalized predictive results that can help you make informed decisions about your health.'
                         />

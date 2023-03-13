@@ -12,6 +12,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
+import PollIcon from '@mui/icons-material/Poll';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 
 const Header = ({ onSidebarMobileOpen }) => {
     const theme = useTheme();
@@ -36,7 +38,7 @@ const Header = ({ onSidebarMobileOpen }) => {
                     <Link href='/' style={{ textDecoration: 'none' }}>
                         <Box sx={{ display: { md: 'inline', xs: 'none' } }}>
                             <IconButton size='large' disabled>
-                                <CameraAltIcon 
+                                <LocalHospitalIcon 
                                     style={{ 
                                         color: theme.palette.common.white, 
                                         height: 30, 
@@ -54,7 +56,7 @@ const Header = ({ onSidebarMobileOpen }) => {
                                         marginLeft: '10px'
                                     }}
                                 >
-                                    Ovarian Cancer Predicition
+                                    Ovarian Cancer Risk Predicition
                                 </Typography>
                             </IconButton>
                         </Box>
@@ -81,7 +83,7 @@ const Header = ({ onSidebarMobileOpen }) => {
                         <Button
                             component='a'
                             color='primary'
-                            href='/survey'
+                            href='/classifier'
                             size='small'
                             variant='text'
                             sx={{
@@ -94,7 +96,7 @@ const Header = ({ onSidebarMobileOpen }) => {
                                 },
                             }}
                         >
-                            <InsertPhotoOutlinedIcon 
+                            <PollIcon 
                                 style={{ height: 23, width: 23 }} 
                             /> Survey
                         </Button>
