@@ -62,16 +62,7 @@ const ImageDropZone = () => {
           </Typography>
         </Box>
       </Box>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Multiple Choice</MenuItem>
-        <MenuItem onClick={handleClose}>Checkbox</MenuItem>
-        <MenuItem onClick={handleClose}>Short Answer</MenuItem>
-        <MenuItem onClick={handleClose}>Long Answer</MenuItem>
-      </Menu>
+      
     </Box>
   );
 };

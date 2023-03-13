@@ -24,6 +24,110 @@ const ClassifierHeader = () => {
                         Select answers to the question prompts as best as possible, these answers will determine your results!
                     </Typography>
                 </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
+                <Box paddingTop={2}>
+                    <Typography
+                        color={theme.palette.text.secondary}
+                        variant='h3'
+                    >
+                        Education
+                    </Typography>
+                </Box>
             </Grid>
         </React.Fragment>
     );
