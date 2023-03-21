@@ -60,6 +60,18 @@ const ImageDropZone = () => {
           <Typography variant='' color={theme.palette.text.secondary}>
             Select survey structure
           </Typography>
+          <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        keepMounted
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Option 1</MenuItem>
+        <MenuItem onClick={handleClose}>Option 2</MenuItem>
+        <MenuItem onClick={handleClose}>Option 3</MenuItem>
+      </Menu>
+
         </Box>
       </Box>
       
