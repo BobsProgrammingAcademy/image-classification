@@ -152,9 +152,7 @@ print("Number of classes:", num_classes)
 class_counts = Counter(ydata_subset)
 print("Class counts:", class_counts)
 
-#visualize the count
-sns.countplot(ydata_subset, label="count classes")
-plt.show()
+
 
 
 #splitting dataset
@@ -183,7 +181,9 @@ grid_search = GridSearchCV(estimator = rf, param_grid = param_grid,
                          cv = 3, n_jobs = -1, verbose = 2, scoring='balanced_accuracy')
 
 '''
-def evaluate(model, test_features, test_labels):
+
+
+def evaluate(model, test_features):
     y_pred = model.predict(test_features)
     print(y_pred)
     clf_report = pd.DataFrame(classification_report(y_test, y_pred, output_dict=True))
@@ -195,15 +195,23 @@ def evaluate(model, test_features, test_labels):
     print(f"Confusion Matrix: \n {confusion_matrix(y_test, y_pred)}\n")
     print(f"Balanced Accuracy: \n {balanced_accuracy_score(y_test,y_pred)}\n")
 
+    
+    return y_pred
+
 rf.fit(X_train,y_train)
+
+
 
 
 # Saving model to current directory
 # Pickle serializes objects so they can be saved to a file, and loaded in a program again later on.
 pickle.dump(rf, open('model.pkl','wb'))
 
+user1 = [[1,1,1,1,1,1,1,1,1,1,50,150,1,1,1,1,1,5,30,20,30,2,2,2]]
+print(evaluate(rf,user1))
 
-evaluate(rf,X_test,y_test)
+
+
 '''
 # Fit the grid search to the data
 grid_search.fit(X_train,y_train)
