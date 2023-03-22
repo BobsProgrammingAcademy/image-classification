@@ -184,8 +184,7 @@ grid_search = GridSearchCV(estimator = rf, param_grid = param_grid,
 
 
 def evaluate(model, test_features):
-    y_pred = model.predict(test_features)
-    print(y_pred)
+    
     clf_report = pd.DataFrame(classification_report(y_test, y_pred, output_dict=True))
     print("Test Result:\n================================================")        
     print(f"Accuracy Score: {accuracy_score(y_test, y_pred) * 100:.2f}%")
