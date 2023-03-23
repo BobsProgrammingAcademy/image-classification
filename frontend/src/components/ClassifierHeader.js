@@ -93,17 +93,15 @@ const ClassifierHeader = () => {
       DIFF_A,
     };
 
-    console.log("It gets to before axios post");
-
     const parameters1 = JSON.stringify(params);
-    alert(parameters1);
-    print(fh_cancer);
+    //alert(parameters1);
+    //print(fh_cancer);
     axios
       .post("http://localhost:8080/prediction", params)
       .then((res) => {
         const data = res.data.data;
         const parameters = JSON.stringify(params);
-        alert(parameters);
+
         const delayInMilliseconds = 5000; //1 second
 
         setTimeout(function () {
@@ -120,8 +118,6 @@ const ClassifierHeader = () => {
         // reset();
       })
       .catch((error) => alert(`Error: ${error.message}`));
-
-    console.log("Gets to after axios");
   };
 
   const handleClick = (event) => {
@@ -160,7 +156,7 @@ const ClassifierHeader = () => {
   };
 
   return (
-    <form onClick={handleSubmit}>
+    <form>
       <Typography color={theme.palette.text.primary} variant="h2">
         Survey
       </Typography>
@@ -180,6 +176,7 @@ const ClassifierHeader = () => {
           included.
           <Typography></Typography>0 = No
           <Typography></Typography>1 = Yes
+          <Typography></Typography>
         </Typography>
         <TextField
           id="fh_cancer"
@@ -544,7 +541,7 @@ const ClassifierHeader = () => {
 
       <Box padding={2}>
         <Typography color={theme.palette.text.secondary} variant="h8">
-          22. Over the past three months, how much have you beenbothered by
+          22. Over the past three months, how much have you been bothered by
           abdominal, pelvic, or genital pain?
           <Typography>
             Indicate either:
@@ -624,7 +621,7 @@ const ClassifierHeader = () => {
         display="flex"
         justifyContent="flex-end"
         alignItems="flex-end">
-        <Button variant="contained" type="button">
+        <Button onClick={handleSubmit} variant="contained" type="button">
           {" "}
           Submit Survey{" "}
         </Button>
