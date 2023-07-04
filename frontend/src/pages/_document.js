@@ -9,16 +9,20 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <link href='/images/favicon.ico' rel='shortcut icon' type='image/x-icon' />
-          <link  
+          <link
+            href='/images/favicon.ico'
+            rel='shortcut icon'
+            type='image/x-icon'
+          />
+          <link
             href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'
             rel='stylesheet'
-            crossOrigin='anonymous' 
-            referrerPolicy='no-referrer' 
+            crossOrigin='anonymous'
+            referrerPolicy='no-referrer'
           />
-          <link 
-            href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' 
-            rel='stylesheet' 
+          <link
+            href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'
+            rel='stylesheet'
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
@@ -56,14 +60,14 @@ MyDocument.getInitialProps = async (ctx) => {
   // 2. page.getInitialProps
   // 3. app.render
   // 4. page.render
-  
+
   const originalRenderPage = ctx.renderPage;
-  
+
   // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
-  
+
   ctx.renderPage = () =>
     originalRenderPage({
       enhanceApp: (App) =>
@@ -71,7 +75,7 @@ MyDocument.getInitialProps = async (ctx) => {
           return <App emotionCache={cache} {...props} />;
         },
     });
-  
+
   const initialProps = await Document.getInitialProps(ctx);
   // This is important. It prevents emotion to render invalid HTML.
   // See https://github.com/mui-org/material-ui/issues/26561#issuecomment-855286153
@@ -83,13 +87,13 @@ MyDocument.getInitialProps = async (ctx) => {
       dangerouslySetInnerHTML={{ __html: style.css }}
     />
   ));
-  
+
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish
     styles: [
-      ...React.Children.toArray(initialProps.styles), 
-      ...emotionStyleTags
+      ...React.Children.toArray(initialProps.styles),
+      ...emotionStyleTags,
     ],
   };
 };

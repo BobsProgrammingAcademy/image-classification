@@ -15,14 +15,14 @@ import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 
 const Header = ({ onSidebarMobileOpen }) => {
   const theme = useTheme();
-  
+
   return (
     <>
       <AppBar
         elevation={5}
         sx={{
           backgroundColor: theme.palette.primary.main,
-          color: theme.palette.common.white
+          color: theme.palette.common.white,
         }}
       >
         <Toolbar sx={{ minHeight: 70 }}>
@@ -36,22 +36,22 @@ const Header = ({ onSidebarMobileOpen }) => {
           <Link href='/' style={{ textDecoration: 'none' }}>
             <Box sx={{ display: { md: 'inline', xs: 'none' } }}>
               <IconButton size='large' disabled>
-                <CameraAltIcon 
-                  style={{ 
-                    color: theme.palette.common.white, 
-                    height: 30, 
-                    width: 30 
-                  }} 
+                <CameraAltIcon
+                  style={{
+                    color: theme.palette.common.white,
+                    height: 30,
+                    width: 30,
+                  }}
                 />
-                <Typography 
+                <Typography
                   component='h1'
-                  variant='h3' 
-                  sx={{ 
+                  variant='h3'
+                  sx={{
                     flexGrow: 1,
                     color: theme.palette.common.white,
                     fontWeight: 'bold',
                     textDecoration: 'none',
-                    marginLeft: '10px'
+                    marginLeft: '10px',
                   }}
                 >
                   Image Classification
@@ -72,7 +72,7 @@ const Header = ({ onSidebarMobileOpen }) => {
               fontWeight: 'medium',
               mr: 2,
               '& svg': {
-                mr: 0.5
+                mr: 0.5,
               },
             }}
           >
@@ -90,13 +90,12 @@ const Header = ({ onSidebarMobileOpen }) => {
               fontWeight: 'medium',
               mr: 2,
               '& svg': {
-                mr: 0.5
+                mr: 0.5,
               },
             }}
           >
-            <InsertPhotoOutlinedIcon 
-              style={{ height: 23, width: 23 }} 
-            /> Image Classifier
+            <InsertPhotoOutlinedIcon style={{ height: 23, width: 23 }} /> Image
+            Classifier
           </Button>
         </Toolbar>
         <Divider />

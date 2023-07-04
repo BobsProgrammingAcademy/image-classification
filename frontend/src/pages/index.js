@@ -11,14 +11,12 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>
-          Home | Image Classification
-        </title>
+        <title>Home | Image Classification</title>
       </Head>
       <Hero />
       <CustomDivider />
       <Description />
-      <Spacer sx={{ pt: 20}} />
+      <Spacer sx={{ pt: 20 }} />
     </>
   );
 };

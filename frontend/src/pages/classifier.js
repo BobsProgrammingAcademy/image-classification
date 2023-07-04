@@ -24,18 +24,18 @@ const Classifier = () => {
   const [files, setFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [image, setImage] = useState(null);
-  
+
   const handleDrop = (files) => {
     setIsLoading(true);
     setFiles(files);
     setImage(null);
     loadImage(files);
   };
-  
+
   const handleRemove = () => {
     setFiles([]);
   };
-  
+
   const loadImage = (files) => {
     setTimeout(() => {
       setFiles(files);
@@ -45,52 +45,52 @@ const Classifier = () => {
       setImage(null);
     }, 3000);
   };
-  
+
   const sendData = () => {
     setFiles([]);
     setIsLoading(true);
-    
+
     const formData = new FormData();
     formData.append('image', files[0], files[0].name);
-    
-    axios.post('http://127.0.0.1:8000/api/classifier/', formData, {
-      headers: {
-        'accept': 'application/json',
-        'content-type': 'multipart/form-data'
-      }
-    })
-    .then(response => {
-      getClassificationResult(response);
-    })
-    .catch(err => console.log(err));
+
+    axios
+      .post('http://127.0.0.1:8000/api/classifier/', formData, {
+        headers: {
+          accept: 'application/json',
+          'content-type': 'multipart/form-data',
+        },
+      })
+      .then((response) => {
+        getClassificationResult(response);
+      })
+      .catch((err) => console.log(err));
   };
-  
+
   const getClassificationResult = (obj) => {
-    axios.get(`http://127.0.0.1:8000/api/classifier/${obj.data.id}/`, {
-      headers: {
-        'accept': 'application/json',
-      }
-    })
-    .then(response => {
-      setImage(response);
-    })
-    .catch(err => console.log(err));
-    
+    axios
+      .get(`http://127.0.0.1:8000/api/classifier/${obj.data.id}/`, {
+        headers: {
+          accept: 'application/json',
+        },
+      })
+      .then((response) => {
+        setImage(response);
+      })
+      .catch((err) => console.log(err));
+
     setIsLoading(false);
   };
-  
+
   const classifyAnother = () => {
     setImage(null);
   };
-  
+
   return (
     <>
       <Head>
-        <title>
-          Image Classifier | Image Classification
-        </title>
+        <title>Image Classifier | Image Classification</title>
       </Head>
-      <Box 
+      <Box
         backgroundColor={theme.palette.background.default}
         minHeight='100%'
         paddingTop={15}
@@ -98,7 +98,7 @@ const Classifier = () => {
       >
         <Container maxWidth={false}>
           <Grid container spacing={3}>
-            <Grid 
+            <Grid
               item
               container
               alignItems='center'
@@ -137,11 +137,8 @@ const Classifier = () => {
                       alignItems='flex-start'
                       justifyContent='center'
                     >
-                      {(files.length > 0 && !isLoading) && (
-                        <Box 
-                          marginTop={2}
-                          color={theme.palette.text.secondary}
-                        >
+                      {files.length > 0 && !isLoading && (
+                        <Box marginTop={2} color={theme.palette.text.secondary}>
                           Loaded image: <Button>{files[0].name}</Button>
                         </Box>
                       )}
@@ -154,14 +151,16 @@ const Classifier = () => {
               <>
                 <ClassifierResult
                   selectedImage={image.data.image}
-                  classificationResult={capitalizeFirstLetter(replaceUnderscore(image.data.result))} 
+                  classificationResult={capitalizeFirstLetter(
+                    replaceUnderscore(image.data.result)
+                  )}
                 />
                 <ClassifyAgain submitOnClick={classifyAnother} />
               </>
             )}
             <Grid item xs={12}>
-              {(files.length > 0 && !isLoading) && (
-                <ClassifierButtons 
+              {files.length > 0 && !isLoading && (
+                <ClassifierButtons
                   submitOnClick={sendData}
                   resetOnClick={handleRemove}
                 />
@@ -170,7 +169,7 @@ const Classifier = () => {
           </Grid>
         </Container>
       </Box>
-      <Spacer sx={{ pt: 6}} />
+      <Spacer sx={{ pt: 6 }} />
     </>
   );
 };

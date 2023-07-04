@@ -9,9 +9,9 @@ import Sidebar from './Sidebar';
 
 const Layout = ({ children }) => {
   const theme = useTheme();
-  
+
   const [isSidebarMobileOpen, setIsSidebarMobileOpen] = useState(false);
-  
+
   return (
     <Box
       sx={{
@@ -20,20 +20,18 @@ const Layout = ({ children }) => {
       }}
     >
       <Header onSidebarMobileOpen={() => setIsSidebarMobileOpen(true)} />
-      <Sidebar 
+      <Sidebar
         onMobileClose={() => setIsSidebarMobileOpen(false)}
         openMobile={isSidebarMobileOpen}
       />
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <Footer />
     </Box>
   );
 };
 
 Layout.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default Layout;

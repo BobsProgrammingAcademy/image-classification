@@ -12,7 +12,7 @@ import DescriptionItem from './DescriptionItem';
 
 const Description = () => {
   const theme = useTheme();
-  
+
   return (
     <Box
       maxWidth={{ sm: 720, md: 1236 }}
@@ -33,8 +33,8 @@ const Description = () => {
             alignItems: 'center',
             flexDirection: 'column',
             px: {
-              md: '15px !important'
-            }
+              md: '15px !important',
+            },
           }}
         >
           <Typography
@@ -58,17 +58,19 @@ const Description = () => {
             A step-by-step guide on how to use the app
           </Typography>
           <Grid container spacing={4} data-aos='fade-up'>
-            <DescriptionItem 
+            <DescriptionItem
               icon={<AddAPhotoOutlinedIcon style={{ height: 25, width: 25 }} />}
               title='Select an Image'
               subtitle='Select an image for classification and drag-and-drop it into the provided dropzone in the browser.'
             />
-            <DescriptionItem 
-              icon={<SendToMobileOutlinedIcon style={{ height: 25, width: 25 }} />}
+            <DescriptionItem
+              icon={
+                <SendToMobileOutlinedIcon style={{ height: 25, width: 25 }} />
+              }
               title='Send the Image for Classification'
               subtitle='Press the Send Image button to send the image to the machine learning model for classification.'
             />
-            <DescriptionItem 
+            <DescriptionItem
               icon={<GetAppOutlinedIcon style={{ height: 25, width: 25 }} />}
               title='Get the Classification Result'
               subtitle='Next, the machine learning model classifies the image, and the result of the classification is then printed on the screen.'

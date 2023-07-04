@@ -7,11 +7,10 @@ import PlayIcon from '@mui/icons-material/PlayCircleOutlineOutlined';
 
 const HeroButtons = () => {
   const theme = useTheme();
-  const isMd = useMediaQuery(
-    theme.breakpoints.up('md'),
-    { defaultMatches: true }
-  );
-  
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
+
   return (
     <>
       <Box
@@ -21,7 +20,7 @@ const HeroButtons = () => {
         justifyContent='center'
         marginTop={4}
       >
-        <Button 
+        <Button
           component='a'
           variant='contained'
           size='large'
@@ -38,8 +37,8 @@ const HeroButtons = () => {
             '&:hover': {
               backgroundColor: 'transparent',
               color: theme.palette.primary.main,
-              border: '2px solid ' + theme.palette.primary.main
-            }
+              border: '2px solid ' + theme.palette.primary.main,
+            },
           }}
         >
           Get Started
@@ -49,7 +48,7 @@ const HeroButtons = () => {
           marginLeft={{ sm: 1 }}
           width={{ xs: '100%', md: 'auto' }}
         >
-          <Button 
+          <Button
             component='a'
             variant='outlined'
             color='primary'
@@ -66,8 +65,8 @@ const HeroButtons = () => {
               '&:hover': {
                 backgroundColor: theme.palette.primary.main,
                 color: theme.palette.common.white,
-                border: '2px solid ' + theme.palette.primary.main
-              }
+                border: '2px solid ' + theme.palette.primary.main,
+              },
             }}
           >
             Watch Demo

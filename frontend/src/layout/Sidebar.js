@@ -13,13 +13,13 @@ import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 const Sidebar = ({ onMobileClose, openMobile }) => {
   const theme = useTheme();
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
-  
+
   useEffect(() => {
     if (openMobile && onMobileClose) {
       onMobileClose();
     }
   }, []);
-  
+
   return (
     <>
       <Drawer
@@ -30,8 +30,8 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
         PaperProps={{
           sx: {
             backgroundColor: theme.palette.background.default,
-            width: 256
-          }
+            width: 256,
+          },
         }}
       >
         <Box
@@ -44,14 +44,14 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
           <Link href='/' style={{ textDecoration: 'none' }}>
             <Box>
               <IconButton size='large' disabled>
-                <CameraAltIcon 
-                  style={{ 
-                    color: theme.palette.primary.main, 
-                    height: 30, 
-                    width: 30 
-                  }} 
+                <CameraAltIcon
+                  style={{
+                    color: theme.palette.primary.main,
+                    height: 30,
+                    width: 30,
+                  }}
                 />
-                <Typography 
+                <Typography
                   component='h1'
                   variant='h6'
                   color={theme.palette.text.primary}
@@ -78,7 +78,7 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
                 fontWeight: 'medium',
                 mr: 2,
                 '& svg': {
-                  mr: 0.5
+                  mr: 0.5,
                 },
               }}
             >
@@ -97,13 +97,12 @@ const Sidebar = ({ onMobileClose, openMobile }) => {
               fontWeight: 'medium',
               mr: 2,
               '& svg': {
-                mr: 0.5
+                mr: 0.5,
               },
             }}
           >
-            <InsertPhotoOutlinedIcon 
-              style={{ height: 23, width: 23 }} 
-            /> Image Classifier
+            <InsertPhotoOutlinedIcon style={{ height: 23, width: 23 }} /> Image
+            Classifier
           </Button>
         </Box>
       </Drawer>

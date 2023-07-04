@@ -7,11 +7,10 @@ import SendIcon from '@mui/icons-material/SendToMobile';
 
 const ClassifyAgain = ({ submitOnClick }) => {
   const theme = useTheme();
-  const isMd = useMediaQuery(
-    theme.breakpoints.up('md'),
-    { defaultMatches: true }
-  );
-  
+  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
+    defaultMatches: true,
+  });
+
   return (
     <>
       <Grid item xs={12}>
@@ -23,7 +22,7 @@ const ClassifyAgain = ({ submitOnClick }) => {
             justifyContent='center'
             marginTop={4}
           >
-            <Button 
+            <Button
               variant='contained'
               color='primary'
               size='large'
@@ -39,8 +38,8 @@ const ClassifyAgain = ({ submitOnClick }) => {
                 '&:hover': {
                   backgroundColor: 'transparent',
                   color: theme.palette.primary.main,
-                  border: '2px solid ' + theme.palette.primary.main
-                }
+                  border: '2px solid ' + theme.palette.primary.main,
+                },
               }}
             >
               Classify Again
