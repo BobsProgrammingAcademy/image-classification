@@ -37,7 +37,7 @@ const ClassifierButtons = ({ submitOnClick, resetOnClick }) => {
               '&:hover': {
                 backgroundColor: 'transparent',
                 color: theme.palette.primary.main,
-                border: '2px solid ' + theme.palette.primary.main,
+                border: `2px solid ${theme.palette.primary.main}`,
               },
             }}
           >
@@ -60,11 +60,11 @@ const ClassifierButtons = ({ submitOnClick, resetOnClick }) => {
                 padding: '14px 30px',
                 marginRight: '45px',
                 fontSize: '18px',
-                border: '2px solid ' + theme.palette.primary.main,
+                border: `2px solid ${theme.palette.primary.main}`,
                 '&:hover': {
                   backgroundColor: theme.palette.primary.main,
                   color: theme.palette.common.white,
-                  border: '2px solid ' + theme.palette.primary.main,
+                  border: `2px solid ${theme.palette.primary.main}`,
                 },
               }}
             >
