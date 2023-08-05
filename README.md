@@ -26,7 +26,9 @@ Install the following prerequisites:
 
 ## Installation
 
-### 1. Create a virtual environment
+### Backend
+
+#### 1. Create a virtual environment
 
 From the **root** directory run:
 
@@ -37,7 +39,7 @@ cd backend
 python -m venv venv
 ```
 
-### 2. Activate the virtual environment
+#### 2. Activate the virtual environment
 
 From the **backend** directory run:
 
@@ -53,7 +55,7 @@ On Windows:
 venv\scripts\activate
 ```
 
-### 3. Install required backend dependencies
+#### 3. Install required backend dependencies
 
 From the **backend** directory run:
 
@@ -61,7 +63,7 @@ From the **backend** directory run:
 pip install -r requirements.txt
 ```
 
-### 4. Run migrations
+#### 4. Run migrations
 
 From the **backend** directory run:
 
@@ -73,7 +75,9 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. Install required frontend dependencies
+### Frontend
+
+#### 1. Install required frontend dependencies
 
 From the **root** directory run:
 
@@ -88,7 +92,7 @@ npm install
 
 To run the application, you need to have both the backend and the frontend up and running.
 
-### 1. Run backend
+#### 1. Run backend
 
 From the **backend** directory run:
 
@@ -96,7 +100,7 @@ From the **backend** directory run:
 python manage.py runserver
 ```
 
-### 2. Run frontend
+#### 2. Run frontend
 
 From the **frontend** directory run:
 
@@ -104,7 +108,7 @@ From the **frontend** directory run:
 npm run dev
 ```
 
-### 3. View the application
+#### 3. View the application
 
 Go to http://localhost:3000/ to view the application.
 
@@ -112,31 +116,31 @@ Go to http://localhost:3000/ to view the application.
 
 This section describes how to customize the application. 
 
-### 1. Changing Colors
+#### 1. Changing Colors
 
 To modify the colors in the application, make changes in the ```frontend/src/theme/theme.js``` file.
 
-### 2. Changing Fonts
+#### 2. Changing Fonts
 
 To modify the fonts in the application, first, add a new font to the ```frontend/src/pages/_document.js``` file, and then make changes in the ```frontend/src/theme/theme.js``` file.
 
-### 3. Changing Logo
+#### 3. Changing Logo
 
 To modify the logo in the application, make changes in the ```frontend/src/layout/Header.js``` and ```frontend/src/layout/Sidebar.js``` files.
 
-### 4. Changing the Image in the Hero Section
+#### 4. Changing the Image in the Hero Section
 
 To modify the image in the Hero section, make changes in the ```frontend/src/components/Hero.js``` and ```frontend/src/layout/Footer.js``` files.
 
-### 5. Changing the Text in the Hero Section
+#### 5. Changing the Text in the Hero Section
 
 To modify the text in the Hero section, make changes in the ```frontend/src/components/Hero.js``` file.
 
-### 6. Changing Buttons in the Hero Section
+#### 6. Changing Buttons in the Hero Section
 
 To modify the two buttons in the Hero section, make changes in the ```frontend/src/components/HeroButtons.js``` file.
 
-### 7. Changing the App Description
+#### 7. Changing the App Description
 
 To modify the app's description on the home page, make changes in the ```frontend/src/components/Description.js``` file.
 
@@ -144,3 +148,4 @@ To modify the app's description on the home page, make changes in the ```fronten
 ## Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
+3
