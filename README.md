@@ -14,7 +14,7 @@ This is an image classification app built using **Django 3**, **Django REST Fram
 - [Copyright and License](#copyright-and-license)
 
 
-## Prerequisites
+### Prerequisites
 
 Install the following prerequisites:
 
@@ -24,9 +24,9 @@ Install the following prerequisites:
 3. [Visual Studio Code](https://code.visualstudio.com/download)
 
 
-## Installation
+### Installation
 
-### Backend
+#### Backend
 
 #### 1. Create a virtual environment
 
@@ -75,7 +75,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### Frontend
+#### Frontend
 
 #### 1. Install required frontend dependencies
 
@@ -88,7 +88,7 @@ cd frontend
 npm install
 ```
 
-## Run the application
+### Run the application
 
 To run the application, you need to have both the backend and the frontend up and running.
 
@@ -112,7 +112,7 @@ npm run dev
 
 Go to http://localhost:3000/ to view the application.
 
-## Customize the application
+### Customize the application
 
 This section describes how to customize the application. 
 
@@ -144,8 +144,7 @@ To modify the two buttons in the Hero section, make changes in the ```frontend/s
 
 To modify the app's description on the home page, make changes in the ```frontend/src/components/Description.js``` file.
 
-
-## Copyright and License
+### Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
 3
