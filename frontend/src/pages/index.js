@@ -16,7 +16,7 @@ const Home = () => {
       <Hero />
       <CustomDivider />
       <Description />
-      <Spacer sx={{ pt: 20 }} />
+      <Spacer sx={{ paddingTop: 20 }} />
     </>
   );
 };
