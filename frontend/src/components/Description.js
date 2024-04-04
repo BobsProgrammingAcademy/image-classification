@@ -32,7 +32,7 @@ const Description = () => {
           sx={{
             alignItems: 'center',
             flexDirection: 'column',
-            px: {
+            paddingX: {
               md: '15px !important',
             },
           }}
