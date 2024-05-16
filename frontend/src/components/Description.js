@@ -22,9 +22,9 @@ const Description = () => {
       paddingBottom={2}
     >
       <Box
-        data-aos='fade-up'
         backgroundColor={theme.palette.background.default}
         paddingTop={4}
+        data-aos='fade-up'
       >
         <Container
           maxWidth='lg'
@@ -37,23 +37,23 @@ const Description = () => {
             },
           }}
         >
-          <Typography
-            data-aos='fade-up'
+          <Typography            
             align='center'
             color={theme.palette.text.primary}
             variant='h1'
             marginTop='30px'
+            data-aos='fade-up'
           >
             How Does It Work?
           </Typography>
           <Typography
-            data-aos='fade-up'
             align='center'
             color={theme.palette.text.secondary}
             variant='h4'
             paddingTop={3}
             paddingBottom={3}
             marginBottom='15px'
+            data-aos='fade-up'
           >
             A step-by-step guide on how to use the app
           </Typography>
