@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
