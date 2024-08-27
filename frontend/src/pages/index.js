@@ -1,5 +1,4 @@
 import 'regenerator-runtime';
-import React from 'react';
 import Head from 'next/head';
 
 import CustomDivider from '../components/CustomDivider';
