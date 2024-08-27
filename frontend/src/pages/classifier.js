@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import Head from 'next/head';
 import Button from '@mui/material/Button';
