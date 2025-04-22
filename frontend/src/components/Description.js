@@ -1,8 +1,11 @@
+// Material UI
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material';
+
+// Material Icons
 import SendToMobileOutlinedIcon from '@mui/icons-material/SendToMobileOutlined';
 import GetAppOutlinedIcon from '@mui/icons-material/GetAppOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
