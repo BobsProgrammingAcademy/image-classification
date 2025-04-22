@@ -1,7 +1,10 @@
+// Material UI
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { useTheme, useMediaQuery } from '@mui/material';
+
+// Material Icons
 import SendIcon from '@mui/icons-material/SendToMobile';
 
 const ClassifyAgain = ({ submitOnClick }) => {
