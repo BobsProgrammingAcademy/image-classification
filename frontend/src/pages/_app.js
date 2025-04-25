@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
 import Head from 'next/head';
+
+// Material UI
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
