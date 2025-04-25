@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
+
+// Material UI
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { useTheme, useMediaQuery } from '@mui/material';
+
+// Material Icons
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
