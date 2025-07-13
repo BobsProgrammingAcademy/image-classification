@@ -10,6 +10,7 @@ import SendToMobileOutlinedIcon from '@mui/icons-material/SendToMobileOutlined';
 import GetAppOutlinedIcon from '@mui/icons-material/GetAppOutlined';
 import AddAPhotoOutlinedIcon from '@mui/icons-material/AddAPhotoOutlined';
 
+// Components
 import DescriptionItem from './DescriptionItem';
 
 const Description = () => {
