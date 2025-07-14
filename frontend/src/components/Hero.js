@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import { useTheme, useMediaQuery } from '@mui/material';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+// Components
 import HeroButtons from '../components/HeroButtons';
 
 const Hero = () => {
