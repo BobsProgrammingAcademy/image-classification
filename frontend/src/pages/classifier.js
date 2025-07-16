@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid';
 import LinearProgress from '@mui/material/LinearProgress';
 import { useTheme } from '@mui/material';
 
+// Components
 import ImageDropzone from '../components/ImageDropzone';
 import ClassifierButtons from '../components/ClassifierButtons';
 import ClassifierHeader from '../components/ClassifierHeader';
