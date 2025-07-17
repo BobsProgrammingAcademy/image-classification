@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import Head from 'next/head';
 
+// Components
 import CustomDivider from '../components/CustomDivider';
 import Description from '../components/Description';
 import Hero from '../components/Hero';
